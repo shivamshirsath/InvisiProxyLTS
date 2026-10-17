@@ -1,5 +1,7 @@
+
 #!/bin/sh
-# Start Tor in the background; note that this may take awhile even after the app starts
+set -e
+
 tor &
 
-exec pnpm start
+exec node dist/server.js
